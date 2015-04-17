@@ -1,0 +1,49 @@
+{
+	"name":"Ebola response",
+	"short_name":"ebola",
+	"category":"Ebola response",
+	"description":"Is protective equipment being used in Ebola disaster responses?",
+	"why":"TODO",
+	"icon_link":"http://farm4.staticflickr.com/3912/14770269674_63a555e566_z.jpg",
+	"questions":[
+		{
+			"id":1,
+			"title":"Do you see any people in this photo?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"ebolapeople"
+			},
+			"branch":[
+				{"no":"finish"}
+			]
+		},
+		{
+			"id":2,
+			"title":"Are the people in the photo wearing any protective equipment?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"ebolaanyprotective"
+			},
+			"branch":[
+				{"no":4}
+			]
+		},
+		{
+			"id":3,
+			"title":"Are the people in the photo wearing all recommended protective equipment?",
+			"hint":"Recommended equipment includes gloves, gown, boots/closed shoes with overshoes, mask, and eye protection.",
+			"type":"binary",
+			"answer":{
+				"saved_as":"ebolaallprotective"
+			}
+		},
+		{
+			"id":4,
+			"title":"Does this image show people cleaning, decontaminating or disinfecting an environment in response to Ebola?",
+			"type":"binary",
+			"answer":{
+				"saved_as":"ebolacleaning"
+			}
+		}
+	]
+}
