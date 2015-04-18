@@ -15,4 +15,5 @@ geotagx.task.run("ebola", function(question, answer){
 			geotagx.task.showNextQuestion();
 		default:
 			break;
+	}
 });
