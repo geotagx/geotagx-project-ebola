@@ -3,8 +3,7 @@
 	"short_name":"ebola",
 	"category":"Ebola response",
 	"description":"Is protective equipment being used in Ebola disaster responses?",
-	"why":"TODO",
-	"icon_link":"http://farm4.staticflickr.com/3912/14770269674_63a555e566_z.jpg",
+	"why":"This project helps assess the use of personel protective equipment in ebola response efforts.",
 	"questions":[
 		{
 			"id":1,
