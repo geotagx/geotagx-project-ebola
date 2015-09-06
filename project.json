@@ -4,45 +4,33 @@
 	"category":"Ebola response",
 	"description":"Is protective equipment being used in Ebola disaster responses?",
 	"why":"This project helps assess the use of personel protective equipment in ebola response efforts.",
-	"questions":[
+	"questionnaire":[
 		{
-			"id":1,
-			"title":"Do you see any people in this photo?",
+			"question":"Do you see any people in this photo?",
+			"key":"ebolapeople",
 			"type":"binary",
-			"answer":{
-				"saved_as":"ebolapeople"
-			},
-			"branch":[
-				{"no":"finish"}
-			]
-		},
-		{
-			"id":2,
-			"title":"Are the people in the photo wearing any protective equipment?",
-			"type":"binary",
-			"answer":{
-				"saved_as":"ebolaanyprotective"
-			},
-			"branch":[
-				{"no":4}
-			]
-		},
-		{
-			"id":3,
-			"title":"Are the people in the photo wearing all recommended protective equipment?",
-			"hint":"Recommended equipment includes gloves, gown, boots/closed shoes with overshoes, mask, and eye protection.",
-			"type":"binary",
-			"answer":{
-				"saved_as":"ebolaallprotective"
+			"branch":{
+				"no":"end"
 			}
 		},
 		{
-			"id":4,
-			"title":"Does this image show people cleaning, decontaminating or disinfecting an environment in response to Ebola?",
+			"question":"Are the people in the photo wearing any protective equipment?",
+			"key":"ebolaanyprotective",
 			"type":"binary",
-			"answer":{
-				"saved_as":"ebolacleaning"
+			"branch":{
+				"no":"ebolacleaning"
 			}
+		},
+		{
+			"question":"Are the people in the photo wearing all recommended protective equipment?",
+			"key":"ebolaallprotective",
+			"type":"binary",
+			"hint":"Recommended equipment includes gloves, gown, boots/closed shoes with overshoes, mask, and eye protection."
+		},
+		{
+			"question":"Does this image show people cleaning, decontaminating or disinfecting an environment in response to Ebola?",
+			"key":"ebolacleaning",
+			"type":"binary"
 		}
 	]
 }
